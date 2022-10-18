@@ -1,4 +1,5 @@
 ﻿using tabuleiro;
+using Xadrez;
 
 namespace ProjetoSistemaJogoXadrez
 {
@@ -24,6 +25,14 @@ namespace ProjetoSistemaJogoXadrez
                     Console.WriteLine();
             }
             Console.WriteLine("  a b c d e f g h");
+        }
+
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char Coluna = s[0];
+            int Linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(Coluna, Linha);
         }
         public static void ImprimirPeca(Peca peca)
         {
